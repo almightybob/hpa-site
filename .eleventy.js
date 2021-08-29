@@ -12,7 +12,7 @@ const pairedshortcodes = require('./utils/paired-shortcodes.js')
 const transforms = require('./utils/transforms.js')
 const svgsprite = require('./utils/svgsprite')
 
-module.exports = function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
 	/**
 	 * Plugins
 	 * @link https://www.11ty.dev/docs/plugins/
@@ -26,7 +26,7 @@ module.exports = function (eleventyConfig) {
 	 * Filters
 	 * @link https://www.11ty.io/docs/filters/
 	 */
-	Object.keys(filters).forEach((filterName) => {
+	Object.keys(filters).forEach(filterName => {
 		eleventyConfig.addFilter(filterName, filters[filterName])
 	})
 
@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
 	 * Transforms
 	 * @link https://www.11ty.io/docs/config/#transforms
 	 */
-	Object.keys(transforms).forEach((transformName) => {
+	Object.keys(transforms).forEach(transformName => {
 		eleventyConfig.addTransform(transformName, transforms[transformName])
 	})
 
@@ -42,7 +42,7 @@ module.exports = function (eleventyConfig) {
 	 * Shortcodes
 	 * @link https://www.11ty.io/docs/shortcodes/
 	 */
-	Object.keys(shortcodes).forEach((shortcodeName) => {
+	Object.keys(shortcodes).forEach(shortcodeName => {
 		eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
 	})
 
@@ -50,7 +50,7 @@ module.exports = function (eleventyConfig) {
 	 * Paired Shortcodes
 	 * @link https://www.11ty.dev/docs/languages/nunjucks/#paired-shortcode
 	 */
-	Object.keys(pairedshortcodes).forEach((shortcodeName) => {
+	Object.keys(pairedshortcodes).forEach(shortcodeName => {
 		eleventyConfig.addPairedShortcode(
 			shortcodeName,
 			pairedshortcodes[shortcodeName]
@@ -73,21 +73,23 @@ module.exports = function (eleventyConfig) {
 	 * If "false" or NULL it will be published in PRODUCTION.
 	 * Every Post will ALWAYS be published in DEVELOPMENT so you can preview locally.
 	 */
-	eleventyConfig.addCollection('post', (collection) => {
+	eleventyConfig.addCollection('post', collection => {
 		if (process.env.ELEVENTY_ENV !== 'production')
 			return [...collection.getFilteredByGlob('./src/posts/*.md')]
 		else
-			return [...collection.getFilteredByGlob('./src/posts/*.md')].filter((post) => !post.data.draft)
+			return [...collection.getFilteredByGlob('./src/posts/*.md')].filter(
+				post => !post.data.draft
+			)
 	})
 
 	// TAGLIST used from the official eleventy-base-blog  https://github.com/11ty/eleventy-base-blog/blob/master/.eleventy.js
-	eleventyConfig.addCollection('tagList', function (collection) {
+	eleventyConfig.addCollection('tagList', function(collection) {
 		let tagSet = new Set()
-		collection.getAll().forEach(function (item) {
+		collection.getAll().forEach(function(item) {
 			if ('tags' in item.data) {
 				let tags = item.data.tags
 
-				tags = tags.filter(function (item) {
+				tags = tags.filter(function(item) {
 					switch (item) {
 						// this list should match the `filter` list in tags.njk
 						case 'authors':
@@ -130,6 +132,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src/assets/images/')
 	eleventyConfig.addPassthroughCopy('src/assets/svg/')
 	eleventyConfig.addPassthroughCopy('src/assets/video/')
+	eleventyConfig.addPassthroughCopy('src/admin/config.yml')
+	eleventyConfig.addPassthroughCopy('src/posts/*.md')
 
 	/**
 	 * Set custom markdown library instance...
@@ -143,7 +147,7 @@ module.exports = function (eleventyConfig) {
 		html: true,
 		breaks: true,
 		linkify: true,
-		typographer: true,
+		typographer: true
 	}
 	let markdownLib = markdownIt(options).use(markdownItEmoji)
 	eleventyConfig.setLibrary('md', markdownLib)
@@ -180,18 +184,18 @@ module.exports = function (eleventyConfig) {
 	// 			},
 	// 		},
 	// 	},
-		// Set local server 404 fallback
-		// callbacks: {
-		// 	ready: function (err, browserSync) {
-		// 		const content_404 = fs.readFileSync('dist/404.html')
+	// Set local server 404 fallback
+	// callbacks: {
+	// 	ready: function (err, browserSync) {
+	// 		const content_404 = fs.readFileSync('dist/404.html')
 
-		// 		browserSync.addMiddleware('*', (req, res) => {
-		// 			// Provides the 404 content without redirect.
-		// 			res.write(content_404)
-		// 			res.end()
-		// 		})
-		// 	},
-		// },
+	// 		browserSync.addMiddleware('*', (req, res) => {
+	// 			// Provides the 404 content without redirect.
+	// 			res.write(content_404)
+	// 			res.end()
+	// 		})
+	// 	},
+	// },
 	// })
 
 	return {
@@ -199,11 +203,11 @@ module.exports = function (eleventyConfig) {
 			input: 'src',
 			output: 'dist',
 			includes: '_includes',
-			data: '_data',
+			data: '_data'
 		},
 		passthroughFileCopy: true,
 		templateFormats: ['html', 'njk', 'md'],
 		htmlTemplateEngine: 'njk',
-		markdownTemplateEngine: 'njk',
+		markdownTemplateEngine: 'njk'
 	}
 }
