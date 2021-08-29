@@ -1,18 +1,20 @@
 ---
-title: Über mich # will be overwritten by SEO.title below
+title: Über mich
 date: 2020-08-05
 layout: page
 eleventyNavigation:
   key: main
-  title: Über mich # as it will appear in the nav
-  order: 4 # order to display in the nav
+  title: Über mich
+  order: 4
 seo:
-  title: Über mich # overrides 'title' above on both Page and META
-  description: Hans-Peter Achberger ist Mediator und Konfliktberater für Paare und Unternehmen
-  image:
+  title: Über mich
+  description: Hans-Peter Achberger ist Mediator und Konfliktberater für Paare und
+    Unternehmen
+  image: null
+excerpt: Über Hans-Peter Achberger
 ---
 
-# Hans-Peter Achberger
+## Hans-Peter Achberger
 
 - Geboren 1962
 - Bürger von Ossingen ZH
@@ -21,7 +23,7 @@ seo:
 - Seit 1985 tätig als Schlagzeuger und Dirigent am Opernhaus Zürich
 - Langjährige Erfahrung als Präsident und Vorstand in unterschiedlichen Organisationen
 
-#### Mediations Laufbahn
+### Mediations Laufbahn
 
 - Grundausbildung als Mediator
 - Ausbildung in Gewaltfreier Kommunikation GFK
