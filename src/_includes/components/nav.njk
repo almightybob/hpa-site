@@ -11,6 +11,8 @@
           {# large logo hidden on small, block on md #}
           <a aria-label="Desktop Logo" href="/" class="hidden md:block {{ colors.logoCustom.desktop or colors.logoDefault.desktop }} hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" alt="Desktop Logo">
             {% svg "logo", "fill-current h-8 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}", "The Logo" %}
+            {# {% image "./src/images/logo-mit-text.png", "photo of my cat" %} #}
+            <img src="./images/logo-mit-text.png" alt="" />
           </a>
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:items-center">

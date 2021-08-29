@@ -1,24 +1,18 @@
 ---
-title: About Title # will be overwritten by SEO.title below
+title: Über mich # will be overwritten by SEO.title below
 date: 2020-08-05
 layout: page
 eleventyNavigation:
   key: main
-  title: About # as it will appear in the nav
+  title: Über mich # as it will appear in the nav
   order: 2 # order to display in the nav
 seo:
-  title: About Us # overrides 'title' above on both Page and META
-  description:
+  title: Über mich # overrides 'title' above on both Page and META
+  description: Hans-Peter Achberger ist Mediator und Konfliktberater für Paare und Unternehmen
   image:
 ---
 
-{% wrap "bg-red-100 mt-4 border border-red-300 rounded-lg underline" %}
-
-Text courtesy [Fillerama.io](http://fillerama.io/)
-
-{% endwrap %}
-
-## I hear the jury's still out on science.
+## Ich bin Hans-Peter Achberger.
 
 Guy's a pro. It's a hug, Michael. I'm hugging you. Michael! I care deeply for nature. That's what it said on 'Ask Jeeves.' Across from where?
 

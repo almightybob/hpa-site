@@ -36,7 +36,7 @@ module.exports = {
 	 *    and wil ensure no errors in "text", "bg", and "border" values.
 	 */
 	navDefault: {
-		barBg: 'bg-white',
+		barBg: 'bg-blue',
 		text: 'text-teal-500',
 		textActive: 'text-teal-600',
 		textHover: 'text-teal-600',
@@ -52,7 +52,7 @@ module.exports = {
 		mobileTextFocus: 'text-teal-700',
 		mobileButton: 'text-teal-500',
 		mobileButtonHover: 'text-teal-600',
-		mobileButtonBgHover: 'bg-teal-100',
+		mobileButtonBgHover: 'bg-teal-100'
 	},
 	/**
 	 *  NOTE: You MUST keep all Custom variable keys, even if their values are empty and you don't intend to use them.
@@ -75,7 +75,7 @@ module.exports = {
 		mobileTextFocus: 'text-gray-700',
 		mobileButton: 'text-gray-500',
 		mobileButtonHover: 'text-gray-600',
-		mobileButtonBgHover: 'bg-gray-100',
+		mobileButtonBgHover: 'bg-gray-100'
 	},
 
 	/**
@@ -84,12 +84,12 @@ module.exports = {
 	logoDefault: {
 		desktop: 'text-teal-500',
 		mobile: 'text-teal-500',
-		hover: 'text-teal-600',
+		hover: 'text-teal-600'
 	},
 	logoCustom: {
 		desktop: 'text-gray-700',
 		mobile: 'text-gray-700',
-		hover: 'text-gray-800',
+		hover: 'text-gray-800'
 	},
 
 	/**
@@ -117,13 +117,13 @@ module.exports = {
 		name: 'text-gray-700',
 		date: 'text-gray-700',
 		socialIcons: 'text-gray-500',
-		socialIconsHover: 'text-gray-600',
+		socialIconsHover: 'text-gray-600'
 	},
 	authorCustom: {
 		name: '',
 		date: '',
 		socialIcons: '',
-		socialIconsHover: '',
+		socialIconsHover: ''
 	},
 
 	/**
@@ -136,11 +136,11 @@ module.exports = {
 	 */
 	socialShareDefault: {
 		color: 'text-gray-700',
-		hover: 'text-gray-800',
+		hover: 'text-gray-800'
 	},
 	socialShareCustom: {
 		color: '',
-		hover: '',
+		hover: ''
 	},
 
 	/**
@@ -151,14 +151,14 @@ module.exports = {
 		textHover: 'text-white',
 		bg: 'bg-teal-700',
 		bgHover: 'bg-teal-700',
-		border: 'border-teal-900',
+		border: 'border-teal-900'
 	},
 	buttonCustom: {
 		text: '',
 		textHover: '',
 		bg: '',
 		bgHover: '',
-		border: '',
+		border: ''
 	},
 
 	/**
@@ -176,7 +176,7 @@ module.exports = {
 		linkBgActive: 'bg-gray-100',
 		linkBgHover: 'bg-gray-200',
 		linkBorder: 'border-gray-300',
-		linkFocusBorder: 'border-blue-300',
+		linkFocusBorder: 'border-blue-300'
 	},
 	paginateCustom: {
 		blockBg: '',
@@ -188,7 +188,7 @@ module.exports = {
 		linkBgActive: '',
 		linkBgHover: '',
 		linkBorder: '',
-		linkFocusBorder: '',
+		linkFocusBorder: ''
 	},
 
 	/**
@@ -198,13 +198,13 @@ module.exports = {
 		text: 'text-gray-700',
 		textHover: 'text-gray-800',
 		bg: '',
-		bgHover: '',
+		bgHover: ''
 	},
 	prevNextCustom: {
 		text: '',
 		textHover: '',
 		bg: '',
-		bgHover: '',
+		bgHover: ''
 	},
 
 	/**
@@ -215,13 +215,13 @@ module.exports = {
 		text: 'text-gray-700',
 		textHover: 'text-gray-800',
 		bg: 'bg-gray-200',
-		bgHover: 'bg-gray-300',
+		bgHover: 'bg-gray-300'
 	},
 	tagPillCustom: {
 		text: '',
 		textHover: '',
 		bg: '',
-		bgHover: '',
+		bgHover: ''
 	},
 
 	/**
@@ -231,11 +231,11 @@ module.exports = {
 	 */
 	footerDefault: {
 		barBg: 'bg-white',
-		text: 'text-teal-500',
+		text: 'text-teal-500'
 	},
 	footerCustom: {
 		barBg: 'bg-gray-900',
-		text: 'text-gray-100',
+		text: 'text-gray-100'
 	},
 
 	/**
@@ -253,10 +253,10 @@ module.exports = {
 	// border settings in other contexts.
 	borderDefault: {
 		borders: 'border-b',
-		color: 'border-gray-300',
+		color: 'border-gray-300'
 	},
 	borderCustom: {
 		border: '',
-		color: '',
-	},
+		color: ''
+	}
 }
