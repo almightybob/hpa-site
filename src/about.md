@@ -5,7 +5,7 @@ layout: page
 eleventyNavigation:
   key: main
   title: Über mich # as it will appear in the nav
-  order: 2 # order to display in the nav
+  order: 4 # order to display in the nav
 seo:
   title: Über mich # overrides 'title' above on both Page and META
   description: Hans-Peter Achberger ist Mediator und Konfliktberater für Paare und Unternehmen

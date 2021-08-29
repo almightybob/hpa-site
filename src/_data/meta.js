@@ -6,18 +6,16 @@ module.exports = {
 	siteImage: '/assets/images/logo-mit-text.png',
 	lang: 'de',
 	locale: 'de_CH',
-	authorName: 'Hans-Pter Achberger',
-	authorURL: 'hpa',
+	authorName: 'Hans-Peter Achberger',
+	authorURL: 'https://mediation-achberger.ch',
 	authorEmail: 'mediation@achberger.ch',
-	twitterSite: '@hpa',
-	twitterCreator: '@hpa',
 	address: {
 		street: 'Löberen 9',
 		city: 'Ossingen',
-		state: 'TG',
-		zip: '8370',
-		phoneDisplay: '+1 (123) 456-7890',
-		phoneCall: '+11234567890',
+		state: 'ZH',
+		zip: '8475',
+		phoneDisplay: '+41 (0)79 745 35 86',
+		phoneCall: '+41797453586',
 		email: 'mediation@achberger.ch'
 	}
 }
