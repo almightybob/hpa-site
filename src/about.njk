@@ -1,0 +1,100 @@
+---
+title: Über mich # will be overwritten by SEO.title below
+date: 2020-08-05
+layout: page
+eleventyNavigation:
+  key: main
+  title: Über mich # as it will appear in the nav
+  order: 4 # order to display in the nav
+seo:
+  title: Über mich # overrides 'title' above on both Page and META
+  description: Hans-Peter Achberger ist Mediator und Konfliktberater für Paare und Unternehmen
+  image:
+hero: graphic # options: carousel, graphic, video, split (text & image)
+heroSettings:
+  height:
+    mobile: h-1/3 # options = h-1/1 (default = full screen), h-1/2, h-1/3, h-3/4, h-9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
+    desktop: # leave blank to inherit "mobile" height (default = full screen)
+  bg:
+    color: bg-grey-200 # default bg-black
+    image: home/cover.jpg # relative to /assets/images/
+    imagePosition: # options = bg-center (default), bg-left, bg-right
+    opacityMobile: opacity-50 # options opacity-n, 5, 10, 15, 20, 25, 50, 75, 100 (default)
+    opacityDesktop: opacity-75 # Leave blank to inherit opacityMobile, use same options as opacityMobile
+  headingText: Hans-Peter Achberger
+  subheadingText: ist Mediator und Konfliktberater für Paare und Unternehmen
+---
+
+
+{% columns %}
+{% cols "flex-none" %}
+<div class="mt-4 ">
+<p>
+  <img class="h-64 rounded-lg" src="{{ seo.image }}" alt="Photo of {{ title }}">
+</p>
+</div>
+{% endcols %}
+{% cols "flex-grow px-8" %}
+<div class="mt-4 text-gray-500">
+  <div class="mb-4">
+    <ul>
+      <li>Geboren 1962</li>
+      <li>Bürger von Ossingen ZH</li>
+      <li>Musikstudium als Schlagzeuger und Dirigent</li>
+      <li>Lizentiatsstudium in Philosophie, Sinologie und Musikwissenschaft</li>
+      <li>Seit 1985 tätig als Schlagzeuger und Dirigent am Opernhaus Zürich</li>
+      <li>Langjährige Erfahrung als Präsident und Vorstand in unterschiedlichen Organisationen</li>
+    </ul>
+
+    <h3>Mediations Laufbahn</h3>
+
+    <ul>
+      <li>Grundausbildung als Mediator</li>
+      <li>Ausbildung in Gewaltfreier Kommunikation GFK</li>
+      <li>Weiterbildungen in diversen Mediations- und Verhandlungsgebieten</li>
+      <li>Masterstudium Mediation und Konfliktmanagement an der Europa-Universität Viadrina in Frankfurt (Oder)</li>
+      <li>Spezialausbildung als Familienmediator</li>
+      <li>Tätigkeit als Schlichter bei der kantonalen Schlichtungsbehörde des Kantons Zürich für Gleichstellungsfragen</li>
+      <li>Beisitzer in Bezirksarbeitsgerichten</li>
+      <li>Tätigkeit als Vortragsredner und Weiterbildner für Konfliktbearbeitungsfragen</li>
+      <li>Aikido 3. Dan</li>
+    </ul>
+  </div>
+
+  {# Display array of Author's company websites  #}
+  <div>
+    {% for sites in author.companyWebsites %}
+      {% if sites.url %}
+        <a class="block hover:underline" target="_blank" href="{{ sites.url | url }}" alt="sites.label website">{{ sites.label }} ↗️</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {# Display array of Author's personal websites  #}
+  <div>
+    {% for sites in author.personalWebsites %}
+      {% if sites.url %}
+        <a class="block hover:underline" target="_blank" href="{{ sites.url | url }}" alt="sites.label website">{{ sites.label }} ↗️</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{# Display Author's social platform links  #}
+<div class="flex items-center mt-4 md:justify-between">
+  <div class="flex justify-center md:order-2 {{ colors.authorCustom.socialIcons or colors.authorDefault.socialIcons }}">
+    {% for sites in author.socialWebsites %}
+      {% if sites.url %}
+        <a class="hover:{{ colors.authorCustom.SocialIconsHover or colors.authorDefault.socialIconsHover }}" alt="{{ author.name }} on {{ sites.label }}" href="{{ sites.url | url }}">
+          {% svg sites.label,
+          "mx-2 h-10 w-10",
+          sites.label ~ " logo",
+          "author" %}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% endcols %}
+{% endcolumns %}
