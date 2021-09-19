@@ -27,10 +27,10 @@ heroSettings:
   headingLogo: assets/images/logo-mit-text-nobg.png
   headingTextColor: # default = text-white (can use any TailwindCSS text-[color]-[xxx])
   headingTextCase: # default = as typed - options: uppercase, lowercase, capitalize
-  subheadingText: Mediation ist die Wurzel alles Guten. - Nietsche
+  subheadingText: # Mediation ist die Wurzel alles Guten. - Nietsche
   subheadingTextColor: # Leave empty to inherit headingTextColor or default (text-white) or use any text-[color]-[xxx]
-  buttonText: Lösen Sie Ihren Konflikt... # no button generated if left blank
-  buttonURL: /kontakt/ # full url required. Example: https://thisdomain.com/somepage/
+  buttonText: # Lösen Sie Ihren Konflikt... # no button generated if left blank
+  buttonURL: # /kontakt/ # full url required. Example: https://thisdomain.com/somepage/
   buttonTextColor: # leave blank to inherit from /src/_data/colors.buttonCustom or buttonDefault
   buttonBgColor: # leave blank to inherit from /src/_data/colors.buttonCustom.bg or buttonDefault.bg
   buttonBgHover: # leave blank to inherit from /src/_data/colors.buttonCustom.bgHover or buttonDefault.bgHover
@@ -39,7 +39,7 @@ heroSettings:
 
 {% columns %}
 {% cols  %}
-![alt text](/home/cover.jpg)
+<img src="assets/images/site/Ovalgross.png" alt="Oval" />
 {% endcols %}
 {% cols  %}
 
@@ -66,6 +66,6 @@ Konfliktmanagement und Einrichtung eines Konfliktmanagementsystems
 
 {% endcols %}
 {% cols  %}
-![oval](/assets/images/site/Ovalgross.png)
+<img src="assets/images/site/Ovalklein.png" alt="Oval" />
 {% endcols %}
 {% endcolumns %}

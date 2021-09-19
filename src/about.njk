@@ -8,7 +8,7 @@ eleventyNavigation:
   order: 4 # order to display in the nav
 seo:
   title: Über mich # overrides 'title' above on both Page and META
-  description: Hans-Peter Achberger ist Mediator und Konfliktberater für Paare und Unternehmen
+  description: # Hans-Peter Achberger ist Mediator und Konfliktberater für Paare und Unternehmen
   image:
 hero: graphic # options: carousel, graphic, video, split (text & image)
 heroSettings:
@@ -29,14 +29,14 @@ heroSettings:
 {% columns %}
 {% cols "flex-none" %}
 <div class="mt-4 ">
-<p>
-  <img class="h-64 rounded-lg" src="{{ seo.image }}" alt="Photo of {{ title }}">
-</p>
+  <img class="h-96 rounded-lg" src="/assets/images/authors/hans-peter-achberger.png" alt="Photo of {{ title }}">
 </div>
 {% endcols %}
 {% cols "flex-grow px-8" %}
 <div class="mt-4 text-gray-500">
   <div class="mb-4">
+      <h3>Lebenslauf</h3>
+
     <ul>
       <li>Geboren 1962</li>
       <li>Bürger von Ossingen ZH</li>
@@ -46,7 +46,7 @@ heroSettings:
       <li>Langjährige Erfahrung als Präsident und Vorstand in unterschiedlichen Organisationen</li>
     </ul>
 
-    <h3>Mediations Laufbahn</h3>
+    <h3 class="pt-5">Mediations Laufbahn</h3>
 
     <ul>
       <li>Grundausbildung als Mediator</li>

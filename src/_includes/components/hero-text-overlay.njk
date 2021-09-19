@@ -1,10 +1,13 @@
 <div class="absolute flex flex-col items-start justify-center h-full {{ heroSettings.headingTextColor or 'text-white' }} {{ structure.g_pageWidth }}">
   
+  {% if heroSettings.headingLogo %}
+  <div class="bg-white rounded-full	p-8">
+    <img src="{{ heroSettings.headingLogo }}" alt="" />
+  </div>
+  {% else %}
+  
   <div class="text-4xl mt-8 font-semibold leading-tight {{ heroSettings.headingTextCase }} md:text-6xl pb-3">
     <h1>{{ heroSettings.headingText | safe  }}</h1>
-  </div>
-  {% if heroSettings.headingLogo %}<div class="bg-white rounded-full	p-8">
-    <img src="{{ heroSettings.headingLogo }}" alt="" />
   </div>
   {% endif %}
   <div class="pt-4 pr-12 text-lg font-light md:text-2xl lg:text-3xl {{ heroSettings.subheadingTextColor }}">
