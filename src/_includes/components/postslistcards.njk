@@ -7,7 +7,7 @@
           <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
             <div class="flex-shrink-0">
               <a href="{{ post.url | url }}">
-                <img class="object-cover {{ post.data.images.align }} w-full h-48" src={% if post.seo.thumbnail %}"/assets/images/{{ post.data.images.thumb }}"{% else %}"/assets/images/david-kovalenko-G85VuTpw6jg-unsplash.jpg"{% endif %} alt="{{ title }} Thumbnail">
+                <img class="object-cover {{ post.data.images.align }} w-full h-48" src={% if post.data.image %}"/assets/images/{{ post.data.image }}"{% else %}"/assets/images/logo-solo.png"{% endif %} alt="{{ title }} Thumbnail">
               </a>
             </div>
             <div class="flex flex-col justify-between flex-1 p-6 bg-white">
@@ -37,13 +37,13 @@
 
               {# Used conditionals here to keep control at the template levels rather than at the component level.  #}
               {# Display the Author block if structure.g_showAuthors is true (default) #}
-              {% if structure.g_showAuthors %}
+              {# {% if structure.g_showAuthors %}
                 {# Only display the Author Block if there is a value for "author" in Post Frontmatter #}
-                {% if post.data.author %}
+                {#% if post.data.author %}
                   {% set postAuthor = authors | getAuthor(post.data.author) %}
                   {% include "components/authordate.njk" %}
                 {% endif %}
-              {% endif %}
+              {% endif %} #}
             </div>
           </div>
 
