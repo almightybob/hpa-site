@@ -28,7 +28,7 @@ collections:
       - { label: 'Beschreibung', name: 'excerpt', widget: 'string' }
       - {
           label: 'Untertitel',
-          name: 'heroSettings.subheadingText',
+          name: heroSettings.subheadingText,
           widget: 'string',
         }
       - {
