@@ -45,3 +45,4 @@ collections:
           required: false,
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Hintergrund Bild', name: 'background', widget: 'image' }
