@@ -1,6 +1,7 @@
 ---
 excerpt: Die Konfliktberatung eignet sich sowohl als Prophylaxe, als auch bei
   niedrig eskalierten Konflikten.
+heroSettings.subheadingText: Dies ist der untertitel von konfliktlösung
 layout: page
 author: Hans-Peter Achberger
 title: Konfliktberatung
