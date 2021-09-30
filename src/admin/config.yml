@@ -27,6 +27,11 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Beschreibung', name: 'excerpt', widget: 'string' }
       - {
+          label: 'Untertitel',
+          name: 'heroSettings.subheadingText',
+          widget: 'string',
+        }
+      - {
           label: 'SEO title',
           name: 'seo.title',
           widget: 'string',
