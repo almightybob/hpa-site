@@ -5,7 +5,7 @@ layout: page
 author: Hans-Peter Achberger
 title: Mediation
 date: 2022-06-16T10:58:20.208Z
-background: pexels-creative-vix-9754.jpg
+background: cover-2.jpeg
 eleventyNavigation:
   key: main
   title: Mediation
